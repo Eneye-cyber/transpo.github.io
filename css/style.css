@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  overflow-x: hidden;
+}
+:root{
+  --primary: #Fc983c;
+  --secondary: rgba(0,0,0,0.4);
+    --light: #f8f9fa;
+    --dark: #000;
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+}
+a{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+.pd-1{  padding-top: 75px;}
+.form h2, h2, span.sm, label{  font-weight: 600;}
+h1{
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1.1;
+}
+.form h2{  font-size: 22px;}
+h2{  font-size: 40px;}
+span.sm, label, input, .form2 select{
+  font-size: 12px;
+  display: block;
+}
+ul{  list-style: none;}
+li{  display: inline-flex;}
+section{
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.container{
+  padding: 20px 30px;
+  margin: 0 auto;
+  max-width: var(--xl);
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.space{  justify-content: space-between;}
+.col-1{  flex: 0 1 100%;}
+.col-2{  flex: 0 1 48%;}
+.col-3{  flex: 0 1 31%;}
+.col-3x{  flex: 0 1 33%;}
+.col-4, .ft-col-4{  flex: 0 1 23%;}
+.col-5{  flex: 0 1 18.5%}
+.mb-4{  margin-bottom: 1.5rem;}
+p, .form2 select{
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.ta-1{  text-align: justify;}
+.fw{  color: #fff;}
+.active{  color: var(--primary);}
+.inactive{  color: #fff;}
+/* header */
+header{
+  padding-top: 20px;
+  height: 100vh;
+  min-height: 650px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* navigation */
+nav{
+  background-color: transparent;
+}
+.logo a{
+  color: #666;
+  font-size: 20px;
+  font-weight: 800;
+}
+.nav-links li, .logo{  padding: 12px 18px;}
+.logo span{  color: var(--primary);}
+li a{  color: var(--dark);}
+/* navigation */
+.viewport{  padding: 50px 20px;}
+.txt-padding{  padding: 20px 40px 20px 10px;}
+h1 span{  display: block;}
+.form{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 30px;
+  width: 100%;
+}
+.form label, .form h2{  color: var(--dark);}
+.col-1 input{  width: 100%;}
+.col-1 input, .col-2 input, .form2 select, .form2 input{
+  line-height: 2;
+  padding: 7px 11px;
+  border: .1px solid var(--secondary);
+  border-radius: 0;
+}
+.form2 form{  margin: 0 auto;}
+.form2 label{  margin-bottom: 1rem;}
+
+.form2 select, .form2 input{
+  color: #666;
+  width: 80%;
+}
+.col-5 input{
+  line-height: 1.6;
+}
+/* header */
+/* services */
+.section-text{
+  margin: 20px auto;
+  text-align: center;
+}
+.section-text p{
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+/* services */
+/* offer */
+.container-xtra{
+  width: 100vw;
+  padding: 20px 30px;
+  justify-content: center;
+}
+.col-4{  text-align: center;}
+.col-4 h3{
+  color: var(--dark);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.col-4 a{
+  display: inline-block;
+  color: #666;
+  padding: .5rem 3rem;
+  border: .3px dotted #666;
+  cursor: pointer;
+}
+
+/* offer */
+/* offer */
+/* testimonials */
+.comment{
+  text-align: center;
+  padding: 20px 30px;
+}
+.comment .client-img img{
+  width: 110px;
+  border-radius: 50%;
+}
+.client{
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: .85px;
+  color: var(--primary);
+  margin-bottom: 0;
+}
+.client-job{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0,0,0,0.4);
+}
+.bordered{
+    -webkit-box-shadow: 0px 5px 30px -15px rgb(0 0 0 / 19%);
+    -moz-box-shadow: 0px 5px 30px -15px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 5px 30px -15px rgb(0 0 0 / 19%);
+}
+
+/* testimonials */
+/* about */
+.about span{  color: var(--primary);}
+.about a{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 2px;
+}
+/* about */
+/* blog */
+
+/* blog */
+/* footer */
+footer{
+  background-color: #000;
+  padding: 50px 0;
+}
+ft-col-4{  text-align: left;}
+.ft-col-4 h3{  color: #fff;}
+.ft-col-4 a{  color: #666;}
+.ft-col-4 h3, .ft-col-4 a{
+  display: block;
+  padding-top: 15px;
+  font-size: 18px;
+}
+.ft-col-4 p{  padding-right: 20px;}
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.text-center{  text-align: center;}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  
+}
