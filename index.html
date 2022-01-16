@@ -17,12 +17,17 @@
   <!-- header -->
   <header>
     <!-- NAV -->
-    <nav>
-      <div class="container flex space">
-        <div class="logo">
+    <nav id="nav">
+      <div class="container flex al-c space">
+        <div class="logo space al-c">
           <a href="#">
             Auto<span>Cad</span>
           </a>
+          <div class="nav-toggle">
+            <a href="" class="nav-menu" id="nav-menu">
+              <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         <div class="nav-links">
           <ul>
@@ -39,7 +44,7 @@
     <!-- NAV -->
     <div class="viewport">
       <div class="container flex space al-c">
-        <div class="col-2">
+        <div class="col-2 mb-5">
           <div>
             <h1 class="fw">
               Now
@@ -277,39 +282,44 @@
     <div class="container flex space">
       <div class="col-4">
         <div>
-          <img src="" alt="">
-        </div>
-        <div>
-          <div class="gold-circle"></div>
-          <p>Pick Destination</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
-        </div>
-      </div>
-      <div class="col-4">
-        <div>
-          <img src="" alt="">
-        </div>
-        <div>
-          <p>Pick Destination</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
+          <div class="gold-circle">
+            <img src="img/destination-white.png" alt=""style="width: 52px;height: 58px;">
+          </div>
+          <p class="white-text">Pick Destination</p>
+          <p class="fade-white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
         </div>
       </div>
       <div class="col-4">
         <div>
-          <img src="" alt="">
-        </div>
-        <div>
-          <p>Pick Destination</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
+          <div class="gold-circle">
+            <a href="https://www.flaticon.com/free-icons/hand" title="hand icons">
+              <img src="img/select.png" alt=""style="width: 40px;">
+            </a>
+          </div>
+          <p class="white-text">Select Terms</p>
+          <p class="fade-white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
         </div>
       </div>
       <div class="col-4">
         <div>
-          <img src="" alt="">
+          <div class="gold-circle">
+            <a href="https://www.flaticon.com/free-icons/hand" title="hand icons">
+              <img src="img/car-rental-white.png" alt=""style="width: 40px;">
+            </a>
+          </div>
+          <p class="white-text">Choose A Car</p>
+          <p class="fade-white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
         </div>
+      </div>
+      <div class="col-4">
         <div>
-          <p>Pick Destination</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
+          <div class="gold-circle">
+            <a href="https://www.flaticon.com/free-icons/review" title="review icons">
+              <img src="img/reviews.png" alt=""style="width: 40px;">
+            </a>
+          </div>
+          <p class="white-text">Enjoy The Ride</p>
+          <p class="fade-white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
         </div>
       </div>
     </div>
@@ -325,8 +335,8 @@
     </div>
     <div class="container flex space">
       <div class="col-3 comment bordered">
-        <div class="client-img">
-          <img src="" alt="">
+        <div class="client-img mb-5">
+          <img src="img/person2.jpeg" alt="">
         </div>
         <div class="client-msg">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
@@ -337,8 +347,8 @@
         </div>
       </div>
       <div class="col-3 comment bordered">
-        <div class="client-img">
-          <img src="" alt="">
+        <div class="client-img mb-5">
+          <img src="img/person1.jpeg" alt="">
         </div>
         <div class="client-msg">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
@@ -349,8 +359,8 @@
         </div>
       </div>
       <div class="col-3 comment bordered">
-        <div class="client-img">
-          <img src="" alt="">
+        <div class="client-img mb-5">
+          <img src="img/person3.jpeg" alt="">
         </div>
         <div class="client-msg">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto, accusantium necessitatibus assumenda.</p>
@@ -365,16 +375,18 @@
   <!-- testimonials -->
   <!-- About Us -->
   <section class="about">
-    <div class="container flex space">
-      <div class="col-2">
-        <img src="img/pexels-sourav-mishra-2811501.jpg" alt="">
+    <div class="container flex center">
+      <div class="col-2 mr-5">
+        <img src="img/half-bg.png" alt="" style="width:545px;height:667px;">
       </div>
       <div class="col-2">
-        <span class="">About Us</span>
-        <h2 class="mb-4">Choose A Perfect Car</h2>
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        <p class="mb-4">On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-        <a href="">Search Vehicle</a>
+        <div class="about-text">
+          <span class="">About Us</span>
+          <h2 class="mb-4">Choose A Perfect Car</h2>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+          <p class="mb-4">On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+          <a href="">Search Vehicle</a>
+        </div>
       </div>
     </div>
   </section>
@@ -389,43 +401,40 @@
     </div>
     <div class="container flex space">
       <div class="col-3">
-        <div>
-          <img src="" alt="">
+        <div class="mb-5">
+          <img src="img/pexels-hamann-la-1131575.jpg" alt="Photo by Hamann La from Pexels">
         </div>
         <div class="date">
           <p>JULY. 24, 2019 ADMIN  3</p>
         </div>
-        <div>
-          <p>Why Lead Generation is Key for Business Growth</p>
-        </div>
+        <div class="blog-title">
+          <a href="#">Why Lead Generation is Key for Business Growth</a>        </div>
         <div>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         </div>
       </div>
       <div class="col-3">
-        <div>
-          <img src="" alt="">
+        <div class="mb-5">
+          <img src="img/pexels-pavlo-luchkovsk.jpg" alt="Photo by Pavlo Luchkovski from Pexels">
         </div>
         <div class="date">
           <p>JULY. 24, 2019 ADMIN  3</p>
         </div>
-        <div>
-          <p>Why Lead Generation is Key for Business Growth</p>
-        </div>
+        <div class="blog-title">
+          <a href="#">Why Lead Generation is Key for Business Growth</a>        </div>
         <div>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         </div>
       </div>
       <div class="col-3">
-        <div>
-          <img src="" alt="">
+        <div class="mb-5">
+          <img src="img/pexels-hamann-la-1131575.jpg" alt="Photo by Hamann La from Pexels">
         </div>
         <div class="date">
           <p>JULY. 24, 2019 ADMIN  3</p>
         </div>
-        <div>
-          <p>Why Lead Generation is Key for Business Growth</p>
-        </div>
+        <div class="blog-title">
+          <a href="#">Why Lead Generation is Key for Business Growth</a>        </div>
         <div>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
         </div>
@@ -438,9 +447,20 @@
     <div class="container flex space">
       <div class="ft-col-4">
         <h3 class="mb-4">ABOUT AUTOWOOD</h3>
-        <p>
+        <p class="fade-white-text">
           Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
         </p>
+        <div class="socials space">
+          <a href="#" class="social al-c center">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social al-c center">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="social al-c center">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
       <div class="ft-col-4">
         <h3>INFORMATION</h3>
@@ -460,30 +480,59 @@
       </div>
       <div class="ft-col-4">
         <h3 class="mb-4">Have A Question</h3>
-        <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-        <a href="#" style="color:#fff;">080 245 7854</a>
-        <a href="" style="color:#fff;">loremipsum@mail.com</a>
+        <div class="ft-flex">
+          <i class="fa fa-map-marker mr-5" aria-hidden="true"></i>
+          <p class="fade-white-text">203 Fake St. Mountain View, San Francisco, California, USA</p>
+        </div>
+        <div class="ft-flex">
+          <i class="fa fa-phone mr-5" aria-hidden="true"></i>
+          <a href="#" style="color:#fff;">080 245 7854</a>
+        </div>
+        <div class="ft-flex">
+          <i class="fa fa-envelope mr-5" aria-hidden="true"></i>
+          <a href="" style="color:#fff;">loremipsum@mail.com</a>
+        </div>
       </div>
     </div>
     <div class="container">
       <hr>
       <div class="footer-copy-right text-center">
-        <p>
+        <p class="fade-white-text">
         Copyright ©
         <script>
           document.write(new Date().getFullYear());
         </script>
         2021 All rights reserved | This template is made with
         <i class="ti-heart" aria-hidden="true"></i> by
-        <a href="" target="_blank">N_I</a>
+        <a href="" target="_blank" class="fade-white-text">N_I</a>
         </p>
       </div>
     </div>
   </footer>
 
   <script type="text/javascript">
+  window.onscroll = function() {myFunction()};
 
+  var navbar = document.getElementById("nav");
+  var sticky = navbar.offsetTop;
 
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky");
+      console.log('success');
+    }
+    else {
+    navbar.classList.remove("sticky");
+    console.log('error');
+    }
+  }
+
+  var nav = document.getElementById('nav');
+    var toggle = document.getElementById('nav-menu');
+      toggle.addEventListener("click", function(event) {
+        event.preventDefault();
+          nav.classList.toggle("nav-active");
+      });
 
   </script>
 

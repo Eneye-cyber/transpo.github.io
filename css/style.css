@@ -7,16 +7,17 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #666;
   overflow-x: hidden;
+  position: relative;
 }
 :root{
   --primary: #Fc983c;
   --secondary: rgba(0,0,0,0.4);
-    --light: #f8f9fa;
-    --dark: #000;
-    --sm: 576px;
-    --md: 768px;
-    --lg: 992px;
-    --xl: 1200px;
+  --light: #f8f9fa;
+  --dark: rgba(0,0,0,0.7);
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
 }
 a{
   text-decoration: none;
@@ -42,6 +43,8 @@ section{
   padding-top: 75px;
   padding-bottom: 80px;
 }
+.white-text{color: #fff;}
+.fade-white-text{color: rgba(255,255,255,0.7);}
 .container{
   padding: 20px 30px;
   margin: 0 auto;
@@ -55,23 +58,28 @@ section{
 .space{  justify-content: space-between;}
 .center{justify-content: center;}
 .col-1{  flex: 0 1 100%;}
-.col-2{  flex: 0 1 48%;}
+.col-2{flex: 1 1 48%;}
 .col-3{  flex: 0 1 31%;}
-.col-3x{flex: 0 1 39%;}
-.col-4, .ft-col-4{  flex: 0 1 23%;}
-.col-5{flex: 0 1 18.5%;}
+.col-3x{flex: 1 1 39%;}
+.col-4, .ft-col-4{flex: 0 1 23%;}
+.col-5{flex: 1 1 18.5%;}
 .mb-4{  margin-bottom: 1.5rem;}
+.mb-5{margin-bottom: 2rem;}
 .mb-3{margin-bottom: 1rem;}
 .mb-2{margin-bottom: 0.5rem;}
 .mr-2{margin-right: 0.7rem;}
+.mr-5{margin-right: 2rem;}
 p{
   font-size: 16px;
   margin-bottom: 1rem;
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
 }
-.ta-1{  text-align: justify;}
+.ta-1{/* text-align: justify; */}
 .fw{  color: #fff;}
 .active{  color: var(--primary);}
 .inactive{  color: #fff;}
+.sticky .inactive{color: var(--dark);}
 /* header */
 header{
   padding-top: 20px;
@@ -81,21 +89,36 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.sticky{
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
 /* navigation */
 nav{
   background-color: transparent;
+  height: 73px;
+  width: 100%;
+  overflow-y: hidden;
+  transition: .8s height linear;
 }
+.nav-toggle{display: none;}
 .logo a{
   color: #fff;
   font-size: 27px;
   font-weight: 800;
 }
-.nav-links li, .nav-links, .logo{  padding: 12px 18px;}
+.sticky .logo a{color: var(--dark);}
+.sticky .logo .nav-toggle a{color: rgba(0,0,0,0.54);}
+.nav-links li, .nav-links, .logo{padding: 2px 18px;height: fit-content;}
+
 .logo span{  color: var(--primary);}
 li a{  color: var(--dark);}
 /* navigation */
 .viewport{  padding: 63px 20px;}
-.txt-padding{  padding: 20px 40px 20px 10px;}
+.txt-padding{padding: 20px 24px 20px 10px;}
 .viewport-video{}
 .viewport-video{
   color: #fff;
@@ -113,7 +136,7 @@ h1 span{  display: block;}
   width: 100%;
 }
 .form label{ margin-bottom: 0.7rem;}
-.form label, .form h2{  color: var(--dark); font-weight: 600;}
+.form label, .form h2{color: var(--dark);font-weight: 700;}
 .viewport-submit{
   display: block;
   width: 100%;
@@ -208,21 +231,26 @@ h1 span{  display: block;}
 WORK
  */
  .work{
-   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/bg1.jpg);
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/sec-bg.webp);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    color: #fff;
  }
  .work .col-4{text-align: center;}
+ .work .white-text{font-size: 19px;}
 .gold-circle{
   width: 75px;
   height: 75px;
   border-radius: 50%;
   background-color: transparent;
   border: 1.6px solid var(--primary);
-  margin: 14px auto;
+  margin: 14px auto 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.gold-circle a{border: none;padding: 0;margin-right: 0;display: inline-flex;}
 /* testimonials */
 .comment{
   text-align: center;
@@ -255,35 +283,89 @@ WORK
 .about span{  color: var(--primary);}
 .about a{
   display: inline-block;
-  padding: 5px 10px;
+  padding: 6px 12px;
   background-color: var(--primary);
   color: #fff;
-  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
 }
+.about-text{padding: 35px 50px 35px 10px;}
+.about-text p{font-size: 18px;}
 /* about */
 /* blog */
-
+.date p{
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.27);
+  letter-spacing: 1px;
+}
+.blog-title a{
+  font-size: 19px;
+  font-weight: 400;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
 /* blog */
 /* footer */
 footer{
   background-color: #000;
   padding: 50px 0;
 }
-ft-col-4{  text-align: left;}
+.ft-col-4{  text-align: left;}
 .ft-col-4 h3{  color: #fff;}
-.ft-col-4 a{  color: #666;}
+.ft-col-4 a{color: rgba(255,255,255,0.7);}
 .ft-col-4 h3, .ft-col-4 a{
   display: block;
   padding-top: 15px;
   font-size: 18px;
 }
+.ft-flex{display: flex; flex-wrap: nowrap;margin-bottom: 10px;}
+.ft-flex i{font-size: 23px;color: #fff;}
+.ft-flex a{padding-top: 0;}
 .ft-col-4 p{  padding-right: 20px;}
+.socials{display: flex;width: 70%;}
+.social{border-radius: 50%;}
+.social{
+    height: 50px;
+    width: 50px;
+    display: flex !important;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    padding-top: 0 !important;
+    position: relative;
+}
+.social i{
+  color: #fff;
+  font-size: 25px;
+}
 hr{
   margin-top: 30px;
   margin-bottom: 30px;
 }
 .text-center{  text-align: center;}
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 650px) {
+  header{    padding-top: 0px;}
+  .nav-toggle{display: block;}
+  nav .flex{flex-direction: column;}
+  nav ul{display: flex;flex-direction: column;}
+  .logo{display: flex;}
+  .nav-active{height: 364px;}
+  .nav-links, .nav-links li{padding: 12px 0;width: 100%;}
+  .nav-toggle{display: inline-block;}
+  .nav-toggle a{color: #fff;padding:3rem 0;}
+  .nav-toggle a{font-size: 1.35em;font-weight: 500;}
+  .logo{padding: 0;width: 100%;}.viewport{padding: 6px 20px 50px 0;}
+  .col-4, .ft-col-4, .col-5 {flex: 1 0 100%;margin-bottom: 1.5rem;}
+  section {padding-bottom: 40px;}
+  .service .container > .container{padding: 20px 0px;}
+  .testimonials .col-3 {    flex: 1 0 100%;margin-right: 1.9rem;}
+  .testimonials .flex{flex-wrap: nowrap;}
+  .col-3 {    flex: 1 1 100%;margin-bottom: 1.5rem;}
+  .blogs img{ width: 100%;}
+  .socials {    width: 40%;}
+  hr {    margin-top: 0px;}
 }
