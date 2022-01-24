@@ -12,7 +12,7 @@
               <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
               <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
               <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+              <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
 <body>
   <!-- header -->
   <header>
@@ -44,7 +44,7 @@
     <!-- NAV -->
     <div class="viewport">
       <div class="container flex space al-c">
-        <div class="col-2 mb-5">
+        <div class="col-2 mb-5"  data-aos="fade-right"  data-aos-duration="3000">
           <div>
             <h1 class="fw">
               Now
@@ -64,7 +64,7 @@
             <p class="fw">Easy Steps For Wanting A Car</p>
           </div>
         </div>
-        <div class="col-3x form">
+        <div class="col-3x form" data-aos="fade-left"  data-aos-duration="3000">
           <h2 class="mb-2">MAKE YOUR TRIP</h2>
           <form action="" class="flex space">
             <div class="col-1 mb-4">
@@ -509,8 +509,9 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript">
+   AOS.init();
   window.onscroll = function() {myFunction()};
 
   var navbar = document.getElementById("nav");
