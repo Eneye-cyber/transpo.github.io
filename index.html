@@ -555,17 +555,29 @@
 
        window.onload = function() {
         // Code here will execute after the entire page, including external scripts, has loaded
-        console.log('All external scripts and resources have loaded.');
-               const originalAddEventListener = window.addEventListener;
+        const observer = new MutationObserver(() => {
+          // Your code to override event listeners here
+           const originalAddEventListener = window.addEventListener;
     
-        window.addEventListener = function(type, listener, options) {
-          if (type === 'focusin') {
-            console.log('Blocking focusin event listener on window');
-            return; // Prevents focusin event listeners from being added to window
-          }
-          
-          originalAddEventListener.call(this, type, listener, options);
-        };
+            window.addEventListener = function(type, listener, options) {
+              if (type === 'focusin') {
+                console.log('Blocking focusin event listener on window');
+                return; // Prevents focusin event listeners from being added to window
+              }
+              
+              originalAddEventListener.call(this, type, listener, options);
+            };
+        });
+        
+        // Start observing the document for changes
+        observer.observe(document, { childList: true, subtree: true });
+        
+        // Stop observing after a certain period or condition is met
+        setTimeout(() => {
+          observer.disconnect();
+        }, 10000); // Adjust time as needed
+        console.log('All external scripts and resources have loaded.');
+
       };
 
 
