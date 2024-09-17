@@ -87,7 +87,7 @@
               <label for="">PICK-OFF TIME</label>
               <input type="datetime" name="time" value="" placeholder="time">
             </div>
-            <input type="submit" name="" value="Search Vehicle" class="viewport-submit">
+            <input type="submit" onclick="testFn(e)" name="" value="Search Vehicle" class="viewport-submit">
           </form>
         </div>
       </div>
@@ -516,6 +516,7 @@
 
   var navbar = document.getElementById("nav");
   var sticky = navbar.offsetTop;
+  var i = 0;
 
   function myFunction() {
     if (window.pageYOffset > sticky) {
@@ -534,6 +535,13 @@
         event.preventDefault();
           nav.classList.toggle("nav-active");
       });
+
+    function testFn(e) {
+        e.preventDefault();
+        console.log(i, 'i');
+        i++;
+        console.log(i);
+    }
 
   </script>
 
