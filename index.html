@@ -553,16 +553,21 @@
       event.stopImmediatePropagation(); // Prevents any other focusin listeners from being called
     });
 
-const originalAddEventListener = window.addEventListener;
+       window.onload = function() {
+        // Code here will execute after the entire page, including external scripts, has loaded
+        console.log('All external scripts and resources have loaded.');
+               const originalAddEventListener = window.addEventListener;
+    
+        window.addEventListener = function(type, listener, options) {
+          if (type === 'focusin') {
+            console.log('Blocking focusin event listener on window');
+            return; // Prevents focusin event listeners from being added to window
+          }
+          
+          originalAddEventListener.call(this, type, listener, options);
+        };
+      };
 
-window.addEventListener = function(type, listener, options) {
-  if (type === 'focusin') {
-    console.log('Blocking focusin event listener on window');
-    return; // Prevents focusin event listeners from being added to window
-  }
-  
-  originalAddEventListener.call(this, type, listener, options);
-};
 
   </script>
 
