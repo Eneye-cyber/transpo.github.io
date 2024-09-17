@@ -15,26 +15,6 @@
               <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
     
 <body>
-    <script>
-        // Function to apply custom behavior for focusin on specific elements
-function applyCustomFocusinBehavior(element) {
-  element.addEventListener('focusin', function(event) {
-    // Custom logic
-    console.log('Custom focusin behavior for this element');
-    // Optionally prevent default behavior
-    event.stopImmediatePropagation();
-    event.preventDefault();
-  }, true); // Use capturing phase if necessary
-}
-
-// Example: Select specific elements and apply custom behavior
-document.addEventListener('DOMContentLoaded', function() {
-  // Apply to elements with a specific class or ID
-  const elementsToCustomize = document.querySelectorAll('input');
-  elementsToCustomize.forEach(applyCustomFocusinBehavior);
-});
-
-    </script>
   <!-- header -->
   <header>
     <!-- NAV -->
@@ -570,36 +550,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(i);
     });
 
-    window.addEventListener("focusin", function(event) {
-      event.stopImmediatePropagation(); // Prevents any other focusin listeners from being called
-    });
 
-       window.onload = function() {
-        // Code here will execute after the entire page, including external scripts, has loaded
-        const observer = new MutationObserver(() => {
-          // Your code to override event listeners here
-           const originalAddEventListener = window.addEventListener;
-    
-            window.addEventListener = function(type, listener, options) {
-              if (type === 'focusin') {
-                console.log('Blocking focusin event listener on window');
-                return; // Prevents focusin event listeners from being added to window
-              }
-              
-              originalAddEventListener.call(this, type, listener, options);
-            };
-        });
-        
-        // Start observing the document for changes
-        observer.observe(document, { childList: true, subtree: true });
-        
-        // Stop observing after a certain period or condition is met
-        setTimeout(() => {
-          observer.disconnect();
-        }, 10000); // Adjust time as needed
-        console.log('All external scripts and resources have loaded.');
-
-      };
     // Function to apply custom behavior for focusin on specific elements
         function applyCustomFocusinBehavior(element) {
           element.addEventListener('focusin', function(event) {
