@@ -566,10 +566,11 @@
         // Example: Select specific elements and apply custom behavior
         document.addEventListener('DOMContentLoaded', function() {
           // Apply to elements with a specific class or ID
-          const elementsToCustomize = document.querySelectorAll('input');
-          elementsToCustomize.forEach(applyCustomFocusinBehavior);
+          const input = document.querySelectorAll('input');
+            const select = document.querySelectorAll('select');
+          [...input, ...select].forEach(applyCustomFocusinBehavior);
         });
-
+        
 
   </script>
 
