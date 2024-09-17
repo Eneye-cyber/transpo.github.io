@@ -549,6 +549,10 @@
         console.log(i);
     });
 
+    window.addEventListener("focusin", function(event) {
+      event.stopImmediatePropagation(); // Prevents any other focusin listeners from being called
+    });
+
   </script>
 
 
