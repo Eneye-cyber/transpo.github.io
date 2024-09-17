@@ -16,25 +16,24 @@
     
 <body>
     <script>
-        // Save reference to the original addEventListener method
-        const originalAddEventListener = EventTarget.prototype.addEventListener;
-        
-        // Override the addEventListener method
-        EventTarget.prototype.addEventListener = function(type, listener, options) {
-          if (type === 'focusin') {
-            console.log('Blocking focusin event listener');
-            return; // Prevents focusin event listeners from being added
-          }
-          
-          // Call the original addEventListener for other event types
-          originalAddEventListener.call(this, type, listener, options);
-        };
-        
-        // Prevent existing focusin events from propagating
-        document.addEventListener('focusin', function(event) {
-          event.stopImmediatePropagation(); // Stops the event from propagating further
-          event.preventDefault(); // Optionally prevent default action if applicable
-        }, true);
+        // Function to apply custom behavior for focusin on specific elements
+function applyCustomFocusinBehavior(element) {
+  element.addEventListener('focusin', function(event) {
+    // Custom logic
+    console.log('Custom focusin behavior for this element');
+    // Optionally prevent default behavior
+    // event.stopImmediatePropagation();
+    // event.preventDefault();
+  }, true); // Use capturing phase if necessary
+}
+
+// Example: Select specific elements and apply custom behavior
+document.addEventListener('DOMContentLoaded', function() {
+  // Apply to elements with a specific class or ID
+  const elementsToCustomize = document.querySelectorAll('.custom-focusin');
+  elementsToCustomize.forEach(applyCustomFocusinBehavior);
+});
+
     </script>
   <!-- header -->
   <header>
@@ -601,6 +600,23 @@
         console.log('All external scripts and resources have loaded.');
 
       };
+    // Function to apply custom behavior for focusin on specific elements
+        function applyCustomFocusinBehavior(element) {
+          element.addEventListener('focusin', function(event) {
+            // Custom logic
+            console.log('Custom focusin behavior for this element');
+            // Optionally prevent default behavior
+            // event.stopImmediatePropagation();
+            // event.preventDefault();
+          }, true); // Use capturing phase if necessary
+        }
+        
+        // Example: Select specific elements and apply custom behavior
+        document.addEventListener('DOMContentLoaded', function() {
+          // Apply to elements with a specific class or ID
+          const elementsToCustomize = document.querySelectorAll('.custom-focusin');
+          elementsToCustomize.forEach(applyCustomFocusinBehavior);
+        });
 
 
   </script>
