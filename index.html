@@ -543,7 +543,7 @@
         console.log(i);
     }
     document.addEventListener("submit", (event) => {
-        e.preventDefault();
+        event.preventDefault();
         console.log(i, 'i');
         i++;
         console.log(i);
@@ -552,6 +552,16 @@
     window.addEventListener("focusin", function(event) {
       event.stopImmediatePropagation(); // Prevents any other focusin listeners from being called
     });
+    const originalAddEventListener = EventTarget.prototype.addEventListener;
+
+EventTarget.prototype.addEventListener = function(type, listener, options) {
+  if (type === 'focusin') {
+    console.log('Blocking focusin event listener');
+    return; // Prevents focusin event listeners from being added
+  }
+  
+  originalAddEventListener.call(this, type, listener, options);
+};
 
   </script>
 
