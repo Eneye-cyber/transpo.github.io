@@ -13,7 +13,29 @@
               <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
               <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
               <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
+    
 <body>
+    <script>
+        // Save reference to the original addEventListener method
+        const originalAddEventListener = EventTarget.prototype.addEventListener;
+        
+        // Override the addEventListener method
+        EventTarget.prototype.addEventListener = function(type, listener, options) {
+          if (type === 'focusin') {
+            console.log('Blocking focusin event listener');
+            return; // Prevents focusin event listeners from being added
+          }
+          
+          // Call the original addEventListener for other event types
+          originalAddEventListener.call(this, type, listener, options);
+        };
+        
+        // Prevent existing focusin events from propagating
+        document.addEventListener('focusin', function(event) {
+          event.stopImmediatePropagation(); // Stops the event from propagating further
+          event.preventDefault(); // Optionally prevent default action if applicable
+        }, true);
+    </script>
   <!-- header -->
   <header>
     <!-- NAV -->
