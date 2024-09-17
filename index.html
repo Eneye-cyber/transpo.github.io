@@ -22,8 +22,8 @@ function applyCustomFocusinBehavior(element) {
     // Custom logic
     console.log('Custom focusin behavior for this element');
     // Optionally prevent default behavior
-    // event.stopImmediatePropagation();
-    // event.preventDefault();
+    event.stopImmediatePropagation();
+    event.preventDefault();
   }, true); // Use capturing phase if necessary
 }
 
@@ -606,8 +606,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Custom logic
             console.log('Custom focusin behavior for this element');
             // Optionally prevent default behavior
-            // event.stopImmediatePropagation();
-            // event.preventDefault();
+            event.stopImmediatePropagation();
+            event.preventDefault();
+              return;
           }, true); // Use capturing phase if necessary
         }
         
