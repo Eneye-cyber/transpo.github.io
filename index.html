@@ -550,6 +550,7 @@
         console.log(i);
     });
 
+      
 
     // Function to apply custom behavior for focusin on specific elements
         function applyCustomFocusinBehavior(element) {
@@ -559,6 +560,8 @@
             // Optionally prevent default behavior
             event.stopImmediatePropagation();
             event.preventDefault();
+            const body = document.getElementsByTagName("BODY")[0];
+              body.style.direction = 'rtl'
               return;
           }, true); // Use capturing phase if necessary
         }
